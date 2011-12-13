@@ -1,12 +1,12 @@
 Name:		fbzx
-Version:	2.6.0
+Version:	2.7.0
 Release:	%mkrel 1
 Summary:	A ZX Spectrum Emulator for FrameBuffer
 Group:		Emulators
 License:	GPLv3+
 URL:		http://www.rastersoft.com/fbzx.html
 Source0:	%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	SDL-devel
 BuildRequires:	alsa-lib-devel
 BuildRequires:	pulseaudio-devel
