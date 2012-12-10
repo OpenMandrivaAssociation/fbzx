@@ -1,14 +1,14 @@
 Name:		fbzx
-Version:	2.9.0
+Version:	2.10.0
 Release:	%mkrel 1
 Summary:	A ZX Spectrum Emulator for FrameBuffer
 Group:		Emulators
 License:	GPLv3+
 URL:		http://www.rastersoft.com/fbzx.html
-Source0:	%{name}-%{version}.tar.bz2
-BuildRequires:	SDL-devel
+Source0:	http://www.rastersoft.com/descargas/%{name}-%{version}.tar.bz2
+BuildRequires:	pkgconfig(sdl)
 BuildRequires:	pkgconfig(alsa)
-BuildRequires:	pulseaudio-devel
+BuildRequires:	pkgconfig(libpulse)
 BuildRequires:	desktop-file-utils
 Suggests:	spectrum-roms
 
@@ -35,8 +35,6 @@ export CFLAGS="%{optflags}"
 %make
 
 %install
-rm -rf %{buildroot}
-
 #install application
 mkdir -p %{buildroot}%{_bindir}
 install -m 755 %{name} %{buildroot}%{_bindir}
@@ -58,13 +56,9 @@ desktop-file-install \
   --dir %{buildroot}%{_datadir}/applications \
   %{name}.desktop
 
-%clean
-rm -rf %{buildroot}
-
 %files
 %doc AMSTRAD CAPABILITIES COPYING FAQ README* TODO VERSIONS
 %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/applications/%{name}.desktop
-
