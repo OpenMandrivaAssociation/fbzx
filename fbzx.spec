@@ -1,6 +1,6 @@
 Name:		fbzx
 Version:	2.10.0
-Release:	%mkrel 1
+Release:	2
 Summary:	A ZX Spectrum Emulator for FrameBuffer
 Group:		Emulators
 License:	GPLv3+
