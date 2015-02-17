@@ -10,6 +10,8 @@ BuildRequires:	pkgconfig(sdl)
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(libpulse)
 BuildRequires:	desktop-file-utils
+BuildRequires:	gcc-c++, gcc, gcc-cpp
+
 Suggests:	spectrum-roms
 
 %description
@@ -31,6 +33,9 @@ chmod 644 z80free/Z80free.c
 rm -rf spectrum-roms
 
 %build
+export CC=gcc
+export CXX=g++
+
 export CFLAGS="%{optflags}"
 %make
 
