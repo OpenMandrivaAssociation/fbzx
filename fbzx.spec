@@ -4,7 +4,7 @@ Release:	2
 Summary:	A ZX Spectrum Emulator for FrameBuffer
 Group:		Emulators
 License:	GPLv3+
-URL:		http://www.rastersoft.com/fbzx.html
+URL:		https://www.rastersoft.com/fbzx.html
 Source0:	http://www.rastersoft.com/descargas/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(sdl)
 BuildRequires:	pkgconfig(alsa)
